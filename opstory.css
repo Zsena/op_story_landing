@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,100&display=swap');
+
 .opstory {
     color: #313131;
 }
@@ -7,10 +9,170 @@
     line-height: 26px;
 }
 
-.fs-6-5 {
+.opstory .fs-6-5 {
     font-size: 18px;
 }
 
-.fs-3-5 {
+.opstory .fs-3-5 {
     font-size: 26px;
+}
+
+.opstory .sans-100-italic {
+    font-family: 'Work Sans', sans-serif;
+    font-style: italic;
+}
+
+/* hero */
+
+.opstory .hero {
+    padding: 7rem 0 3rem 0;
+}
+
+.opstory .hero .circles {
+    max-width: 420px;
+    bottom: -47px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    margin: auto;
+}
+
+@media screen and (min-width: 992px) {
+    .opstory .hero .circles {
+        max-width: 808px;
+        left: auto;
+        bottom: -10%;
+        width: auto;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1198px) {
+    .opstory .hero .circles {
+        bottom: -14%;
+    }
+}
+
+@media screen and (min-width: 1585px) {
+    .opstory .hero .circles {
+        right: -10%;
+    }
+}
+
+
+/* hero images */
+
+.opstory .hero .image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    bottom: -48px;
+    z-index: 1;
+}
+
+.opstory .hero .image-wrapper .left-image {
+    max-width: 160px;
+    position: relative;
+}
+
+.opstory .hero .image-wrapper .right-image {
+    max-width: 200px;
+    position: relative;
+    left: -45px;
+}
+
+@media screen and (min-width: 992px) {
+    .opstory .hero .image-wrapper {
+        position: absolute;
+        width: auto;
+        justify-content: flex-start;
+    }
+
+    .opstory .hero .image-wrapper .left-image {
+        max-width: 100%;
+        left: 0;
+        bottom: -108px;
+        height: 380px;
+    }
+
+    .opstory .hero .image-wrapper .right-image {
+        max-width: 100%;
+        left: auto;
+        right: 115px;
+        height: 414px;
+        bottom: -73px;
+    }
+}
+
+
+
+@media screen and (min-width: 1198px) {
+    .opstory .hero .image-wrapper {
+        bottom: -66px;
+        justify-content: center;
+    }
+
+    .opstory .hero .image-wrapper .left-image {
+        min-height: 482px;
+        height: auto;
+        bottom: 20px
+    }
+
+    .opstory .hero .image-wrapper .right-image {
+        min-height: 525px;
+        height: auto;
+        bottom: 64px;
+    }
+}
+
+
+@media screen and (min-width: 1585px) {
+    .opstory .hero .image-wrapper {
+        right: -10%;
+    }
+}
+
+
+
+/* second section */
+
+.opstory .about {
+    padding: 7rem 0;
+}
+
+.opstory .about .about-image {
+    min-height: 300px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.about-image-mobile {
+    position: relative;
+    left: -35px;
+    bottom: -112px;
+    width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+    .opstory .center-article {
+        margin-left: -10%;
+    }
+}
+
+@media screen and (min-width: 1198px) {
+    .opstory .about .about-image {
+        min-height: 440px;
+        max-width: 600px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1680px) {
+    .opstory .about .about-image {
+        min-height: 567px;
+        max-width: 821px;
+        width: 100%;
+    }
 }

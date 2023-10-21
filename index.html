@@ -15,33 +15,67 @@
     <script src="https://www.onlinepenztarca.hu/js/countup.js" async></script>
     <script src="https://www.onlinepenztarca.hu/js/v2022/splide.min.js?v=1671182833"></script>
     <link rel="stylesheet" href="opstory.css">
-
 </head>
 
 <body>
     <main class="opstory">
-        <section style="background: radial-gradient(116.38% 94.91% at 70.7% 79.12%, #C7C9DC 0%, rgba(228, 229, 236, 0.40) 100%);">
-            <div class="container">
+        <section class="hero position-relative"
+            style="min-height:640px; background: radial-gradient(116.38% 94.91% at 70.7% 79.12%, #C7C9DC 0%, rgba(228, 229, 236, 0.40) 100%);">
+            <div class="container position-relative">
                 <div class="row">
-                    <div style="max-width: 560px;" class="col-12 col-lg-6">
+                    <div style="max-width: 560px;" class="col-12 col-lg-6 position-relative z-1">
                         <h1 class="fw-bold fs-3-5">Az onlinePénztárca story</h1>
-                        <p class="my-4">2017-et írunk, amikor egy vállalkozó szellemű fiatal programozó és egy tapasztalt üzletember együtt megálmodták az onlinePénztárca alapjait. Akkoriban az az érzés járta át a leendő tulajdonosokat, hogy az onlinePénztárca lehet az a szolgáltatás, amely összefogja az ország korrekt webáruházait.</p>
-                        <p class="fs-6-5 fw-bold">A két alapító ereje abban rejlett, hogy különböző tudással gazdagították egymást.</p>
-                        <p class="fs-6-5 ms-4" style="max-width: 490px;"><strong>Horváth Dániel</strong> - a Fiatal vállalkozó rendelkezett azokkal az ismeretekkel, amely technikai alapot szolgáltatott az onlinePénztárcához. </p>
-                        <p class="fs-6-5 ms-4" style="max-width: 490px;"><strong>Biros Levente</strong> - Tapasztalt üzletemberként már az elején tudta milyen üzleti és szervezeti folyamatokat kell megugranunk a fennmaradáshoz. </p>
+                        <p class="my-4">2017-et írunk, amikor egy vállalkozó szellemű fiatal programozó és egy
+                            tapasztalt üzletember együtt megálmodták az onlinePénztárca alapjait. Akkoriban az az érzés
+                            járta át a leendő tulajdonosokat, hogy az onlinePénztárca lehet az a szolgáltatás, amely
+                            összefogja az ország korrekt webáruházait.</p>
+                        <p class="fs-6-5 fw-bold">A két alapító ereje abban rejlett, hogy különböző tudással
+                            gazdagították egymást.</p>
+                        <p class="fs-6-5 ms-4" style="max-width: 490px;"><strong>Horváth Dániel</strong> - a Fiatal
+                            vállalkozó rendelkezett azokkal az ismeretekkel, amely technikai alapot szolgáltatott az
+                            onlinePénztárcához. </p>
+                        <p class="fs-6-5 ms-4" style="max-width: 490px;"><strong>Biros Levente</strong> - Tapasztalt
+                            üzletemberként már az elején tudta milyen üzleti és szervezeti folyamatokat kell megugranunk
+                            a fennmaradáshoz. </p>
                     </div>
                     <div class="col-12 col-lg-6">
-                       <div class="d-flex justify-content-between" style="position: relative;">
-                            <picture>
-                                <img src="opstory_img/left_pic.png">
-                            </picture>
-                            <picture>
-                                <img src="opstory_img/right_pic.png">
-                            </picture>
-                       </div>
+                        <div class="image-wrapper">
+                            <img class="left-image" src="opstory_img/left_pic.png">
+                            <img class="right-image" src="opstory_img/right_pic.png">
+                        </div>
+                    </div>
+                </div>
+                <img class="circles position-absolute w-full justify-content-center z-0 d-flex d-lg-none" src="opstory_svg/circles_mobile.svg">
+                <img class="circles position-absolute w-full justify-content-center z-0 d-none d-lg-flex" src="opstory_svg/circles.svg">
+            </div>
+        </section>
+        <section class="about position-relative" style="min-height: 712px; background: linear-gradient(135deg, #001056 0.72%, #5064B9 37.65%, #5064B9 45.58%, #001057 100%);">
+            <div class="container">
+                <div class="row d-flex flex-column flex-column-reverse flex-lg-row">
+                    <div class="col-12 col-lg-6">
+                        <img class="d-flex d-lg-none about-image-mobile" src="opstory_img/second_section_mobile.png">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <article class="text-white">
+                            <p>Az onlinePénztárca 2017.03.24-én útjának indult és ezt követően több éves fejlesztésre került sor. Ekkoriban egy kulcsfontosságú programozó társult a cégben, hiszen a tudása, kitartása és lojalitása kivívta a tulajdoni részesedést. Minden egyes átdolgozott nap és éjszaka egyre közelebb vitt minket a célunkhoz:</p>
+                            <div class="my-4 center-article" style="background: linear-gradient(167deg, #001056 6.79%, rgba(11, 28, 100, 0.86) 35.3%, rgba(33, 51, 127, 0.38) 69.79%);">
+                                <p class="py-4 px-5 sans-100-italic fs-6-5" style="font-weight: 100;">Az onlinePénztárcát kihirdessük az <br> embereknek és végre lássuk, hogy miért <br> dolgoztunk az évek alatt. </p>
+                            </div>
+                            <p>Első onlinePénztárcás webáruházként az <strong>onlinemárkaboltok.hu</strong> webshopot kötöttük be, mert a tulajdonosi körben már adott volt ez a webáruház. Az pattanásig feszült izgalom akkor kezdődött, amikor az első céget felhívtuk, hogy csatlakozzon a kezdeményezésünkhöz... </p>
+                        </article>
                     </div>
                 </div>
             </div>
+            <img class="d-none d-lg-flex position-absolute left-0 bottom-0 about-image" src="opstory_img/second_section.png">
+        </section>
+        <section class="bg-white" style="min-height: 400px;">
+
+        </section>
+        <section style="min-height: 569px; background: radial-gradient(139.05% 97.95% at 50% 100%, #C7C9DC 0%, rgba(228, 229, 236, 0.20) 100%);">
+
+        </section>
+        <section class="bg-white" style="min-height: 360px;">
+
         </section>
     </main>
 </body>
