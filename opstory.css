@@ -1,12 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500&family=Work+Sans:ital,wght@0,200;0,300;0,700;1,100&display=swap');
+
+/* Variables & colors */
+
+:root {
+    --yellow: #D9EA00;
+    --black: #1A234A;
+    --base-black: #313131;
+    --white: #fff;
+    --bg-opacity: 1;
+}
+
+.yellow {
+    color: var(--yellow);
+}
+
+.black {
+    color: var(--black);
+}
+
+.yellow-linear-bg {
+    background: rgb(207, 224, 0);
+    background: linear-gradient(55deg, rgba(207, 224, 0, 1) 0%, rgba(180, 194, 0, 1) 100%);
+}
+
+.yellow-bg {
+    background-color: var(--yellow);
+}
+
+/* COLORS END */
 
 .opstory {
-    color: #313131;
+    color: var(--base-black);
 }
 
 .opstory p {
     font-size: 16px;
     line-height: 26px;
+}
+
+.opstory a {
+    color: var(--yellow);
+}
+
+.opstory a:hover {
+    text-decoration: underline;
 }
 
 .opstory .fs-6-5 {
@@ -20,6 +57,19 @@
 .opstory .sans-100-italic {
     font-family: 'Work Sans', sans-serif;
     font-style: italic;
+}
+
+.opstory .sans-700 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+}
+
+.opstory .sans-playpen {
+    font-family: 'Playpen Sans', cursive;
+}
+
+.opstory .rounded-20 {
+    border-radius: 20px;
 }
 
 /* hero */
@@ -174,5 +224,463 @@
         min-height: 567px;
         max-width: 821px;
         width: 100%;
+    }
+}
+
+/* team section */
+
+.opstory .team {
+    padding: 7rem 0;
+}
+
+.object-fit-cover {
+    -o-object-fit: cover !important;
+    object-fit: cover !important;
+}
+
+.gallery-btn {
+    width: 92px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    position: absolute;
+    top: -10%;
+    right: 0;
+}
+
+.gallery-btn .gallery-btn-wrapper {
+    padding: 2px;
+    width: 90px;
+    height: 90px;
+}
+
+.opstory .carousel-control-prev,
+.opstory .carousel-control-next {
+    border: 1.932px solid #4E5D9C;
+    border-radius: 33px;
+    background: linear-gradient(160deg, #2E3B6F 8.75%, #1A234A 91.75%);
+    width: 33px;
+    height: 33px;
+    top: 50%;
+}
+
+.opstory .carousel-control-prev-icon,
+.opstory .carousel-control-next-icon {
+    width: 15px;
+}
+
+.opstory .carousel-control-prev {
+    left: -8%;
+}
+
+.opstory .carousel-control-next {
+    right: -8%;
+}
+
+
+@media screen and (min-width: 992px) {
+    .gallery-btn {
+        width: 115px;
+        height: 115px;
+    }
+
+    .gallery-btn .gallery-btn-wrapper {
+        width: 113px;
+        height: 113px;
+    }
+}
+
+
+/* COUNTER SECTION */
+
+.counter-title {
+    font-size: 40px;
+}
+
+@media screen and (min-width: 992px) {
+    .counter-title {
+        font-size: 70px;
+    }
+}
+
+/* COUNTER SECTION END */
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.timeline ul {
+    padding: 50px 0;
+}
+
+.timeline ul li {
+    list-style-type: none;
+    position: relative;
+    padding-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.timeline ul li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 53%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: inherit;
+    z-index: 1;
+    display: none;
+}
+
+.timeline ul li .timeline-card {
+    position: relative;
+    bottom: 0;
+    width: calc(100vw - 100px);
+    padding: 15px;
+}
+
+.timeline ul li .timeline-card::before {
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) .timeline-card {
+    left: 0;
+}
+
+.timeline ul li:nth-child(odd) .timeline-card::before {
+    left: -28%;
+    border-width: 1.5px;
+    border-color: #fff;
+    width: 140px;
+    top: 50%;
+    display: none;
+}
+
+.timeline ul li:nth-child(even) .timeline-card::before {
+    right: -28%;
+    border-width: 1.5px;
+    border-color: #fff;
+    width: 140px;
+    top: 50%;
+    left: -15px;
+    display: none;
+}
+
+.timeline-card-title {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.timeline ul li time {
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.timeline ul li .time {
+    font-size: 1rem;
+    color: var(--yellow);
+}
+
+
+.timeline ul li time>span {
+    font-weight: 300;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.timeline ul li:nth-child(odd) .time,
+.timeline ul li:nth-child(even) .time {
+    text-align: center;
+}
+
+.timeline ul li .border-bottom-elem {
+    min-height: 60px;
+    display: inline-flex;
+    flex-direction: column-reverse;
+}
+
+.timeline ul li .border-bottom-elem::before {
+    border-width: 1px;
+    border-color: var(--white);
+    width: 50px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    content: "";
+    height: 0;
+    border-style: solid;
+    display: inline-flex;
+}
+
+
+
+/* GENERAL TIMELINE MEDIA QUERIES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (min-width: 1198px) {
+    .timeline ul li .time {
+        position: absolute;
+        color: var(--white);
+        font-size: 1.375rem;
+    }
+
+    .timeline ul li:nth-child(odd) .time {
+        left: -265px;
+    }
+
+    .timeline ul li:nth-child(even) .time {
+        right: -225px;
+    }
+
+    .timeline ul li:nth-child(odd) .time {
+        text-align: right;
+    }
+
+    .timeline ul li:nth-child(even) .time {
+        text-align: left;
+    }
+
+    .timeline ul li {
+        width: 2px;
+        margin: 0 auto;
+        display: block;
+        background: #fff;
+    }
+
+    .timeline ul li .timeline-card {
+        width: 430px;
+
+    }
+
+    .timeline ul li:nth-child(even) .timeline-card {
+        left: -560px;
+    }
+
+    .timeline ul li:nth-child(even) .timeline-card::before {
+        left: auto;
+        right: -28%;
+    }
+
+    .timeline ul li:nth-child(odd) .timeline-card::before {
+        left: -28%;
+    }
+
+    .timeline ul li:nth-child(even) .timeline-card::before,
+    .timeline ul li:nth-child(odd) .timeline-card::before {
+        display: block;
+    }
+
+    .timeline ul li:nth-child(odd) .timeline-card {
+        left: 139px;
+    }
+
+    .timeline ul li::after {
+        display: block;
+    }
+}
+
+/* TIMELINE EFFECTS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul li::after {
+    transition: background 0.5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+    background: var(--yellow);
+    background: linear-gradient(55deg, rgba(207, 224, 0, 1) 0%, rgba(180, 194, 0, 1) 100%);
+    display: none;
+}
+
+.timeline ul li .timeline-card {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+}
+
+.timeline-card-img {
+    width: 130px;
+    height: 130px;
+}
+
+@media screen and (min-width: 992px) {
+
+    .timeline ul li .border-bottom-elem {
+        display: none;
+    }
+
+    .timeline ul li .timeline-card {
+        text-align: left;
+    }
+
+    .timeline ul li:nth-child(even) .timeline-card {
+        text-align: right;
+    }
+
+    .timeline-card-img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (min-width: 1198px) {
+    .timeline ul li.in-view::after {
+        display: block;
+    }
+
+    .timeline-card-img {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .timeline-card-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .timeline ul li .timeline-card {
+        width: 550px;
+
+    }
+
+    .timeline ul li:nth-child(even) .timeline-card {
+        left: -683px;
+    }
+
+    .timeline ul li:nth-child(even) .timeline-card::before {
+        right: -22%;
+    }
+
+    .timeline ul li:nth-child(odd) .timeline-card::before {
+        left: -22%;
+    }
+}
+
+/* card effects */
+
+.timeline ul li:nth-child(odd) .timeline-card {
+    transform: translate3d(0, 200px, 0);
+}
+
+.timeline ul li:nth-child(even) .timeline-card {
+    transform: translate3d(0, -200px, 0);
+}
+
+.timeline ul li.in-view .timeline-card {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Teammembers*/
+
+.opstory .card {
+    background-color: transparent;
+    border: 0;
+}
+
+.opstory .sign-wrapper .sign {
+    width: 2.55em;
+    height: 2.5em;
+    position: relative;
+}
+
+.opstory .sign-wrapper .sign .horizontal {
+    width: 20px;
+    height: 1px;
+    margin-left: -10px;
+    margin-top: -0.5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: var(--white);
+}
+
+.opstory .closed .horizontal {
+    transition: all .5s ease-in-out;
+    transform: rotate(-90deg);
+    opacity: 1;
+}
+
+.opstory .horizontal {
+    transition: all .5s ease-in-out;
+    transform: rotate(-90deg);
+    opacity: 1;
+}
+
+.opstory .sign-wrapper .sign .vertical {
+    width: 1px;
+    height: 20px;
+    margin-left: 0.5px;
+    margin-top: -10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: var(--white);
+}
+
+.opstory .closed .vertical {
+    transition: all .5s ease-in-out;
+    transform: rotate(-90deg);
+}
+
+.opstory .vertical {
+    transition: all .5s ease-in-out;
+    transform: rotate(-90deg);
+}
+
+.opened {
+    opacity: 1;
+}
+
+.opened .horizontal {
+    transition: all .5s ease-in-out;
+    transform: rotate(90deg);
+    opacity: 0;
+}
+
+.opened .vertical {
+    transition: all .5s ease-in-out;
+    transform: rotate(90deg);
+}
+
+.opstory .team-member-second-img {
+    transition: all .5s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.opstory .card:hover .team-member-second-img {
+    opacity: 1;
+}
+
+.card-img-overlay {
+    background: rgba(217, 234, 0, 1);
+    background: linear-gradient(45deg, rgba(217, 234, 0, 1) 1%, rgba(217, 234, 0, 0.01) 40%);
+}
+
+
+@media screen and (min-width: 992px) {
+    .team-member-row > div:nth-child(even) {
+        margin-top: -15px;
     }
 }
