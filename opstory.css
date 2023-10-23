@@ -8,6 +8,8 @@
     --base-black: #313131;
     --white: #fff;
     --bg-opacity: 1;
+    --base-mobile-padding: 4rem;
+    --base-desktop-padding: 7rem;
 }
 
 .yellow {
@@ -75,7 +77,7 @@
 /* hero */
 
 .opstory .hero {
-    padding: 7rem 0 3rem 0;
+    padding: var(--base-mobile-padding) 0 3rem 0;
 }
 
 .opstory .hero .circles {
@@ -88,6 +90,11 @@
 }
 
 @media screen and (min-width: 992px) {
+
+    .opstory .hero {
+        padding: var(--base-desktop-padding) 0 3rem 0;
+    }
+
     .opstory .hero .circles {
         max-width: 808px;
         left: auto;
@@ -125,15 +132,69 @@
 .opstory .hero .image-wrapper .left-image {
     max-width: 160px;
     position: relative;
+    object-fit: contain;
+    bottom: -12px;
 }
 
 .opstory .hero .image-wrapper .right-image {
     max-width: 200px;
     position: relative;
     left: -45px;
+    object-fit: contain;
+}
+
+.opstory .caption-bg-wrapper {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+}
+
+.opstory .caption-bg {
+    max-width: 180px;
+}
+
+.opstory .left-caption-bg {
+    left: -30px;
+    position: relative;
+    top: -50px;
+}
+
+.opstory .right-caption-bg {
+    left: -80px;
+    position: relative;
+}
+
+.opstory .caption {
+    position: absolute;
+    font-size: 0.875rem;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+}
+
+.opstory .left-caption-bg .caption {
+    top: 25px;
+    left: 28px;
+}
+
+.opstory .right-caption-bg .caption {
+    top: 25px;
+    left: 35px;
+}
+
+@media screen and (min-width: 768px) {
+    .opstory .left-caption-bg {
+        left: 100px;
+    }
 }
 
 @media screen and (min-width: 992px) {
+    .opstory .caption-bg {
+        max-width: 220px;
+    }
+
     .opstory .hero .image-wrapper {
         position: absolute;
         width: auto;
@@ -143,7 +204,7 @@
     .opstory .hero .image-wrapper .left-image {
         max-width: 100%;
         left: 0;
-        bottom: -108px;
+        bottom: -135px;
         height: 380px;
     }
 
@@ -152,8 +213,35 @@
         left: auto;
         right: 115px;
         height: 414px;
-        bottom: -73px;
+        bottom: -101px;
     }
+
+    .opstory .caption {
+        font-size: 1.063rem;
+    }
+
+    .opstory .left-caption-bg .caption {
+        top: 33px;
+        left: 36px;
+    }
+
+    .opstory .right-caption-bg .caption {
+        top: 33px;
+        left: 46px;
+    }
+
+    .opstory .left-caption-bg {
+        left: -90px;
+        position: relative;
+        top: inherit;
+    }
+
+    .opstory .right-caption-bg {
+        right: 20px;
+        position: relative;
+        left: inherit;
+    }
+
 }
 
 
@@ -173,7 +261,11 @@
     .opstory .hero .image-wrapper .right-image {
         min-height: 525px;
         height: auto;
-        bottom: 64px;
+        bottom: 63px;
+    }
+
+    .opstory .left-caption-bg {
+        left: -20px;
     }
 }
 
@@ -189,7 +281,8 @@
 /* second section */
 
 .opstory .about {
-    padding: 7rem 0;
+    padding: 4rem 0;
+    min-height: 600px;
 }
 
 .opstory .about .about-image {
@@ -201,13 +294,34 @@
 .about-image-mobile {
     position: relative;
     left: -35px;
-    bottom: -112px;
+    bottom: -64px;
     width: 100%;
 }
+
+@media screen and (min-width: 580px) {
+    .about-image-mobile {
+        left: -90px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .about-image-mobile {
+        left: -132px;
+    }
+
+
+
+}
+
 
 @media screen and (min-width: 992px) {
     .opstory .center-article {
         margin-left: -10%;
+    }
+
+    .opstory .about {
+        padding: 7rem 0;
+        min-height: 712px;
     }
 }
 
@@ -280,7 +394,51 @@
 }
 
 
+.opstory .team .team-img-left-wrapper {
+    transform: rotate(7deg);
+    top: -5rem;
+    left: -3%;
+}
+
+.opstory .team .team-img-right-wrapper {
+    transform: rotate(-5deg);
+    right: -8%;
+    bottom: -25rem;
+}
+
+.opstory .team .team-img {
+    width: 127px;
+    height: 120px;
+}
+
+.team-article {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .opstory .team .team-img {
+        width: 190px;
+        height: 176px;
+    }
+}
+
+
 @media screen and (min-width: 992px) {
+
+    .team-article {
+        max-width: 560px;
+    }
+
+    .opstory .team .team-img {
+        width: 368px;
+        height: 310px;
+    }
+
+    .opstory .team .team-img-wrapper {
+        box-shadow: 0px 10px 34px 0px rgba(0, 0, 0, 0.20);
+        position: absolute;
+    }
+
     .gallery-btn {
         width: 115px;
         height: 115px;
@@ -680,7 +838,80 @@
 
 
 @media screen and (min-width: 992px) {
-    .team-member-row > div:nth-child(even) {
+    .team-member-row>div:nth-child(even) {
         margin-top: -15px;
+    }
+}
+
+
+.opstory .top-element {
+    position: absolute;
+    margin: auto;
+    top: -100px;
+    max-width: 190px;
+}
+
+@media all and (min-width: 992px) {
+    .opstory .top-element {
+        top: -115px;
+        max-width: 220px;
+    }
+}
+
+
+.opstory .fade-in-out {
+    animation-name: fadeInOut;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+@keyframes fadeInOut {
+    0% {
+        transform: scale(1)
+    }
+
+    25% {
+        transform: scale(.97)
+    }
+
+    35% {
+        transform: scale(.9)
+    }
+
+    45% {
+        transform: scale(1.1)
+    }
+
+    55% {
+        transform: scale(.9)
+    }
+
+    65% {
+        transform: scale(1.1)
+    }
+
+    75% {
+        transform: scale(1.03)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+@keyframes pulse-base {
+    0% {
+        opacity: .6;
+        fill: currentColor
+    }
+
+    50% {
+        opacity: 1;
+        fill: currentColor
+    }
+
+    100% {
+        opacity: .6;
+        fill: currentColor
     }
 }

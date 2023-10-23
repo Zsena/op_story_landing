@@ -42,8 +42,20 @@
                     </div>
                     <div class="col-12 col-lg-6">
                         <div class="image-wrapper">
+                            <div class="caption-bg-wrapper w-100">
+                                <div class="left-caption-bg border-0 bg-transparent">
+                                    <img class="caption-bg" src="opstory_svg/caption_bg.svg">
+                                    <p class="position-absolute mb-0 caption">Horváth Dániel</p>
+                                </div >
+                                <div class="right-caption-bg border-0 bg-transparent">
+                                    <img class="caption-bg" src="opstory_svg/caption_bg.svg">
+                                    <p class="position-absolute mb-0 caption">Bíró Levente</p>
+                                </div>
+                            </div>
+
                             <img class="left-image" src="opstory_img/left_pic.png">
                             <img class="right-image" src="opstory_img/right_pic.png">
+
                         </div>
                     </div>
                 </div>
@@ -54,11 +66,12 @@
             </div>
         </section>
         <section class="about position-relative"
-            style="min-height: 712px; background: linear-gradient(135deg, #001056 0.72%, #5064B9 37.65%, #5064B9 45.58%, #001057 100%);">
+            style="background: linear-gradient(135deg, #001056 0.72%, #5064B9 37.65%, #5064B9 45.58%, #001057 100%);">
             <div class="container">
                 <div class="row d-flex flex-column flex-column-reverse flex-lg-row">
                     <div class="col-12 col-lg-6">
-                        <img class="d-flex d-lg-none about-image-mobile" src="opstory_img/second_section_mobile.png">
+                        <img class="d-flex d-sm-none about-image-mobile" src="opstory_img/second_section_mobile.png">
+                        <img class="d-none d-sm-flex d-lg-none about-image-mobile" src="opstory_img/second_section.png">
                     </div>
                     <div class="col-12 col-lg-6">
                         <article class="text-white">
@@ -86,8 +99,8 @@
         <section class="bg-white team" style="min-height: 400px;">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-lg-6">
-                        <article style="max-width: 560px;">
+                    <div class="col-12 col-lg-6 mb-5 mb-lg-0">
+                        <article class="team-article">
                             <p>Ezután a cégben egy hosszú és izgalmas kaland vette kezdetét, amely már nem csupán a
                                 programozásra korlátozódott, hanem a <strong>cég szervezeti, gazdasági és technológiai
                                     fejlődéséről szólt.</strong></p>
@@ -97,16 +110,14 @@
                         </article>
                     </div>
                     <div class="col-12 col-lg-6">
-                        <div class="d-flex">
-                            <figure class="bg-white pt-2 px-2 pb-4"
-                                style="box-shadow: 0px 10px 34px 0px rgba(0, 0, 0, 0.20); transform: rotate(7deg);">
-                                <img style="max-width: 368px; height: 340px;" class="w-100 object-fit-cover"
+                        <div class="d-flex align-items-center position-relative justify-content-center">
+                            <figure class="bg-white pt-2 px-2 pb-4 team-img-wrapper team-img-left-wrapper">
+                                <img class="object-fit-cover team-img"
                                     src="opstory_img/team1.png" alt="Csapatunk">
                                 <figcaption class="text-uppercase sans-playpen text-center pt-3"
                                     style="transform: rotate(12deg);">Expo</figcaption>
                             </figure>
-                            <figure class="bg-white pt-2 px-2 pb-4 position-relative"
-                                style="box-shadow: 0px 10px 34px 0px rgba(0, 0, 0, 0.20); transform: rotate(-5deg);">
+                            <figure class="bg-white pt-2 px-2 pb-4 team-img-wrapper team-img-right-wrapper">
                                 <button class="gallery-btn yellow-linear-bg rounded-circle black border-0" type="button"
                                     data-bs-toggle="modal" data-bs-target="#teamModal">
                                     <span
@@ -133,9 +144,8 @@
                                         </span>
                                         <span class="fs-5 sans-700">Galéria</span>
                                     </span>
-
                                 </button>
-                                <img style="max-width: 368px; height: 340px;" class="w-100 object-fit-cover"
+                                <img class="object-fit-cover team-img"
                                     src="opstory_img/team2.png" alt="Csapatunk">
                                 <figcaption class="sans-playpen text-center pt-3" style="transform: rotate(-10deg);">
                                     Vakáció!!!!!!</figcaption>
@@ -231,8 +241,9 @@
                 </div>
             </div>
         </section>
-        <section class="bg-white d-flex flex-column justify-content-center align-items-center"
+        <section class="bg-white d-flex flex-column justify-content-center align-items-center position-relative"
             style="min-height: 360px;">
+            <img class="fade-in-out top-element" src="opstory_svg/wallet_yellow.svg">
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center d-flex justify-content-center align-items-center">
