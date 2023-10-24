@@ -32,8 +32,6 @@
 .opstory h1,
 .opstory h2,
 .opstory h3,
-.opstory h4,
-.opstory h5,
 .opstory .fs-6-5,
 .opstory .fs-3 {
     font-family: 'Work Sans', sans-serif;
@@ -69,7 +67,9 @@
     font-size: 1.5rem;
 }
 
+
 @media all and (min-width: 580px) {
+    
 
     .opstory p {
         font-size: 1rem;
@@ -116,7 +116,17 @@
     margin: auto;
 }
 
+.opstory .btn-close {
+    position: relative;
+    top: -10px;
+}
+
+
 @media screen and (min-width: 992px) {
+
+    .opstory .btn-close {
+        right: -45px;
+    }
 
     .opstory .hero {
         padding: var(--base-desktop-padding) 0 3rem 0;
@@ -374,8 +384,9 @@
     align-items: center;
     padding: 2px;
     position: absolute;
-    top: -10%;
+    top: -30%;
     right: 0;
+    font-size: 1rem;
 }
 
 .gallery-btn .gallery-btn-wrapper {
@@ -428,6 +439,14 @@
     width: 100%;
 }
 
+@media screen and (min-width: 375px) {
+    .opstory .team .team-img {
+        width: 150px;
+        height: 140px;
+    }
+}
+
+
 @media screen and (min-width: 768px) {
     .opstory .team .team-img {
         width: 190px;
@@ -454,6 +473,8 @@
     .gallery-btn {
         width: 115px;
         height: 115px;
+        top: -10%;
+        font-size: 1.375rem;
     }
 
     .gallery-btn .gallery-btn-wrapper {
