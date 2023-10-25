@@ -35,13 +35,13 @@
 .opstory h2,
 .opstory h3,
 .opstory .fs-6-5,
-.opstory .fs-3 {
+.opstory .fs-3, .card-title.h5 {
     font-family: var(--base-family);
 }
 
 .opstory h1,
 .opstory h2,
-.opstory h3 {
+.opstory h3, .card-title.h5 {
     font-weight: 700;
 }
 
