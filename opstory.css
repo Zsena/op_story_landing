@@ -647,7 +647,6 @@
 }
 
 /* GENERAL TIMELINE MEDIA QUERIES */
-
 @media screen and (min-width: 1198px) {
     .timeline-card-title {
         font-size: 2rem;
@@ -660,11 +659,11 @@
     }
 
     .timeline ul li:nth-child(odd) .time {
-        left: -265px;
+        left: -225px;
     }
 
     .timeline ul li:nth-child(even) .time {
-        right: -225px;
+        right: -170px;
     }
 
     .timeline ul li:nth-child(odd) .time {
@@ -720,6 +719,12 @@
 
     .timeline ul li::after {
         display: block;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .timeline ul li:nth-child(even) .time {
+        right: -160px;
     }
 }
 
